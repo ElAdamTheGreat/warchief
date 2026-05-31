@@ -1,0 +1,91 @@
+/* REQUIREMENT: CSS3 2D/3D Transforms */
+
+/* --- 2D Transforms --- */
+
+/* Card hover scaling and translating */
+.enemy-card-item {
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+}
+
+.enemy-card-item:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 0 20px rgba(244, 164, 35, 0.25);
+}
+
+/* Spinner rotation */
+.loading-spinner {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  border-top-color: var(--color-gold);
+  animation: spinner-rotate 1s linear infinite;
+}
+
+@keyframes spinner-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Drag preview translation utility */
+.drag-preview-active {
+  transform: scale(1.05) rotate(2deg);
+  opacity: 0.8;
+}
+
+/* --- 3D Transforms --- */
+
+/* Perspective container for the card flip */
+.flip-card-container {
+  perspective: 1200px;
+  width: 100%;
+  max-width: 450px;
+  height: 550px;
+  margin: 0 auto;
+}
+
+/* Inner card that holds the two faces */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+/* Flip trigger class applied from JS */
+.flip-card-container.is-flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Base styles for front and back faces */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-surface);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Front card specific styling */
+.flip-card-front {
+  z-index: 2;
+}
+
+/* Back card specific styling - rotated initially */
+.flip-card-back {
+  transform: rotateY(180deg);
+  background: var(--color-surface-alt);
+}

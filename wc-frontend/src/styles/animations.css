@@ -1,0 +1,128 @@
+/* REQUIREMENT: CSS Transitions & Animations */
+
+/* --- Custom Transitions --- */
+
+/* Page transition fade-in */
+.page-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Color transition on filter chips */
+.filter-chip {
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+/* --- Custom Keyframe Animations --- */
+
+/* 1. Timer Pulse for SVG countdown */
+.timer-pulse {
+  animation: timerPulse 2s infinite ease-in-out;
+}
+
+@keyframes timerPulse {
+  0% {
+    filter: drop-shadow(0 0 2px rgba(244, 164, 35, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 12px rgba(244, 164, 35, 0.8));
+  }
+  100% {
+    filter: drop-shadow(0 0 2px rgba(244, 164, 35, 0.4));
+  }
+}
+
+/* 2. Skeleton Shimmer Loading */
+.skeleton-shimmer {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-surface-alt);
+}
+
+.skeleton-shimmer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.05) 20%,
+    rgba(255, 255, 255, 0.1) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shimmer 1.6s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* 3. Staggered Slide-In for Lineup Cards */
+.slide-in-card {
+  opacity: 0;
+  animation: slideIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered delays using class generations or inline CSS variables */
+.stagger-delay-1 { animation-delay: 0.05s; }
+.stagger-delay-2 { animation-delay: 0.1s; }
+.stagger-delay-3 { animation-delay: 0.15s; }
+.stagger-delay-4 { animation-delay: 0.2s; }
+.stagger-delay-5 { animation-delay: 0.25s; }
+.stagger-delay-6 { animation-delay: 0.3s; }
+.stagger-delay-7 { animation-delay: 0.35s; }
+.stagger-delay-8 { animation-delay: 0.4s; }
+
+/* 4. Drop Success Bounce Animation */
+.bounce-drop-success {
+  animation: bounceDrop 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@keyframes bounceDrop {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.15);
+    background-color: rgba(74, 222, 128, 0.2);
+    border-color: var(--color-green);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Glowing text effect for active planning states */
+.glow-gold-text {
+  text-shadow: 0 0 8px rgba(244, 164, 35, 0.6);
+}

@@ -1,0 +1,16 @@
+{
+  "0": { "name": "Lightning Spell", "icon": "lightning.png", "type": "spell" },
+  "1": { "name": "Healing Spell", "icon": "healing.png", "type": "spell" },
+  "2": { "name": "Haste Spell", "icon": "haste.png", "type": "spell" },
+  "3": { "name": "Jump Spell", "icon": "jump.png", "type": "spell" },
+  "5": { "name": "Freeze Spell", "icon": "freeze.png", "type": "spell" },
+  "9": { "name": "Poison Spell", "icon": "poison.png", "type": "spell" },
+  "10": { "name": "Earthquake Spell", "icon": "earthquake.png", "type": "spell" },
+  "16": { "name": "Clone Spell", "icon": "clone.png", "type": "spell" },
+  "17": { "name": "Skeleton Spell", "icon": "skeleton.png", "type": "spell" },
+  "20": { "name": "Rage Spell", "icon": "rage.png", "type": "spell" },
+  "28": { "name": "Bat Spell", "icon": "bat.png", "type": "spell" },
+  "35": { "name": "Invisibility Spell", "icon": "invisibility.png", "type": "spell" },
+  "53": { "name": "Recall Spell", "icon": "recall.png", "type": "spell" },
+  "70": { "name": "Overgrowth Spell", "icon": "overgrowth.png", "type": "spell" }
+}

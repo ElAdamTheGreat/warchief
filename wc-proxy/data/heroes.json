@@ -1,0 +1,6 @@
+{
+  "0": { "name": "Barbarian King", "icon": "barbarian_king.png" },
+  "1": { "name": "Archer Queen", "icon": "archer_queen.png" },
+  "2": { "name": "Grand Warden", "icon": "grand_warden.png" },
+  "3": { "name": "Royal Champion", "icon": "royal_champion.png" }
+}

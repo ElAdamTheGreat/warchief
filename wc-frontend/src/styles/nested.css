@@ -1,0 +1,65 @@
+/* REQUIREMENT: Native CSS Nesting (2024+ standard) */
+
+.enemy-card-nested {
+  background: var(--color-surface);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 16px;
+  position: relative;
+  
+  /* Nested element selector */
+  & .enemy-name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 4px;
+    
+    /* Double nesting: adjacent sibling inside name */
+    & + .enemy-tag {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      font-family: monospace;
+    }
+  }
+
+  /* Nested class selector */
+  & .th-badge {
+    background: rgba(244, 164, 35, 0.15);
+    border: 1px solid var(--color-gold);
+    color: var(--color-gold);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 800;
+  }
+
+  /* Nested hover state */
+  &:hover {
+    border-color: rgba(244, 164, 35, 0.4);
+    background: rgba(26, 29, 40, 0.95);
+    
+    /* Nested child element shift on parent hover */
+    & .th-badge {
+      background: var(--color-gold);
+      color: var(--color-bg);
+      transform: scale(1.05);
+    }
+  }
+
+  /* Nested modifier class */
+  &.is-starred {
+    border-color: rgba(74, 222, 128, 0.3);
+    box-shadow: 0 0 10px rgba(74, 222, 128, 0.1);
+  }
+
+  /* Nested media query directly inside the class */
+  @media (max-width: 480px) {
+    & {
+      padding: 12px;
+    }
+    
+    & .enemy-name {
+      font-size: 1rem;
+    }
+  }
+}

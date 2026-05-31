@@ -1,0 +1,117 @@
+/* REQUIREMENT: Media Queries (Mobile-First Style) */
+
+/* Default / Mobile-First: Single column grids, layout stacked */
+.nav-menu-container {
+  position: relative;
+}
+
+.nav-links-list {
+  display: none; /* Collapsed by default (hamburger opens it) */
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--color-surface);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  width: 200px;
+  padding: 15px;
+  z-index: 100;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.nav-links-list.is-open {
+  display: flex;
+}
+
+.dashboard-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lineup-grid {
+  grid-template-columns: 1fr;
+}
+
+.planner-layout {
+  display: flex;
+  flex-direction: column; /* Stacked lists on mobile */
+  gap: 20px;
+}
+
+/* 1. Mobile specific custom style (max-width: 480px) */
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 1.2rem;
+  }
+  
+  .enemy-card-content {
+    grid-template-columns: 1fr; /* Stack columns within card */
+  }
+
+  .canvas-container {
+    height: 250px;
+  }
+}
+
+/* 2. Tablet specific custom style (min-width: 481px) and (max-width: 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .lineup-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+  }
+  
+  .dashboard-layout {
+    display: grid;
+    grid-template-columns: 1fr; /* Aside stays below/above on tablet */
+    gap: 25px;
+  }
+
+  .canvas-container {
+    height: 300px;
+  }
+}
+
+/* 3. Desktop specific custom style (min-width: 769px) */
+@media (min-width: 769px) {
+  .nav-hamburger-btn {
+    display: none; /* Hide hamburger on desktop */
+  }
+
+  .nav-links-list {
+    display: flex !important; /* Always show horizontal on desktop */
+    flex-direction: row;
+    position: static;
+    border: none;
+    background: transparent;
+    padding: 0;
+    width: auto;
+    box-shadow: none;
+    align-items: center;
+  }
+
+  .nav-links-list > li {
+    margin: 0 12px;
+  }
+
+  .lineup-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+  }
+
+  .dashboard-layout {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* Sidebar layout on desktop */
+    gap: 30px;
+    align-items: start;
+  }
+
+  .planner-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Team panel left, drop board right */
+    gap: 30px;
+  }
+
+  .canvas-container {
+    height: 350px;
+  }
+}

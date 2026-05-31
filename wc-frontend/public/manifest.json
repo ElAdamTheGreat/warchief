@@ -1,0 +1,17 @@
+{
+  "short_name": "Warchief",
+  "name": "CoC War Planner",
+  "description": "Premium strategist toolkit for planning Clash of Clans wars.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0f1117",
+  "theme_color": "#0f1117",
+  "display": "standalone",
+  "orientation": "portrait"
+}

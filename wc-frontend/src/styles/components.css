@@ -1,0 +1,80 @@
+/* REQUIREMENT: Advanced CSS Selectors */
+
+/* 1. Pseudo-classes: Alternating lineup cards */
+.enemy-lineup-list > .enemy-card-item:nth-child(odd) {
+  background: rgba(26, 29, 40, 0.65);
+}
+
+.enemy-lineup-list > .enemy-card-item:nth-child(even) {
+  background: rgba(37, 40, 54, 0.65);
+}
+
+/* 2. Sibling Combinators & General Siblings for collapsible panels */
+.filter-toggle:checked ~ .filter-panel-content {
+  display: block;
+  opacity: 1;
+  max-height: 500px;
+}
+
+.filter-toggle:not(:checked) ~ .filter-panel-content {
+  display: none;
+  opacity: 0;
+  max-height: 0;
+}
+
+/* 3. Focus Within on Form Elements for visual highlights */
+.search-form-container:focus-within {
+  border-color: var(--color-gold);
+  box-shadow: 0 0 15px rgba(244, 164, 35, 0.2);
+}
+
+/* 4. Combinator: Direct child for styling navigation menu */
+.nav-menu-list > li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+/* Adjacent sibling combinator for input labels */
+.form-input-group > input:focus + label {
+  color: var(--color-gold-light);
+}
+
+/* 5. Pseudo-elements: ::before & ::after for decorative badges and overlays */
+.rank-badge-overlay::before {
+  content: "#";
+  color: var(--color-gold);
+  margin-right: 2px;
+  font-size: 0.85em;
+  font-weight: bold;
+}
+
+.enemy-card-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--color-gold);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.enemy-card-item:hover::after {
+  opacity: 1;
+}
+
+/* 6. :not selector for interactive states */
+.btn-primary:not(.disabled):hover {
+  background-color: var(--color-gold-light);
+  transform: translateY(-2px);
+}
+
+.btn-primary.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.draggable-chip:not(.is-dragging):hover {
+  border-color: var(--color-gold);
+}

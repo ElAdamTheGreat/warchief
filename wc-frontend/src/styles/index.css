@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* clash bold */
+@font-face {
+  font-family: 'Clash';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/Clash_Bold.otf') format('opentype');
+}
+
+/* clash regular */
+@font-face {
+  font-family: 'Clash';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/Clash_Bold.otf') format('opentype');
+}
+
+:root {
+  --color-bg: #0f1117;
+  --color-surface: #1a1d28;
+  --color-surface-alt: #252836;
+  --color-gold: #f4a423;
+  --color-gold-light: #ffd700;
+  --color-green: #4ade80;
+  --color-red: #f87171;
+  --color-blue: #60a5fa;
+  --color-text: #e2e8f0;
+  --color-text-muted: #94a3b8;
+  
+  --font-headings: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headings);
+  letter-spacing: 0.02em;
+}
+
+/* Base custom interactive states */
+a, button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input, select, textarea {
+  font-family: var(--font-body);
+  background: var(--color-surface-alt);
+  color: var(--color-text);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-gold);
+  box-shadow: 0 0 8px rgba(244, 164, 35, 0.25);
+}
