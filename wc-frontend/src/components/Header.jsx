@@ -55,16 +55,6 @@ export function Header() {
             </Link>
           </li>
           
-          <li>
-            <Link
-              to="/test-army"
-              onClick={closeMobileMenu}
-              className="block py-2 text-slate-300 hover:text-amber-500 transition-colors"
-            >
-              Army Tester
-            </Link>
-          </li>
-          
           {clanTag && (
             <>
               <li>

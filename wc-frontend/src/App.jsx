@@ -13,7 +13,6 @@ import { WarPlanner } from './pages/WarPlanner';
 import { EnemyDetail } from './pages/EnemyDetail';
 import { GuidePage } from './pages/GuidePage';
 import { AboutPage } from './pages/AboutPage';
-import { TestArmyPage } from './pages/TestArmyPage';
 
 // Define routing table
 const routes = [
@@ -22,8 +21,7 @@ const routes = [
   { path: '/war/:clanTag/plan', component: WarPlanner },
   { path: '/war/:clanTag/enemy/:pos', component: EnemyDetail },
   { path: '/guide', component: GuidePage },
-  { path: '/about', component: AboutPage },
-  { path: '/test-army', component: TestArmyPage }
+  { path: '/about', component: AboutPage }
 ];
 
 export function App() {
