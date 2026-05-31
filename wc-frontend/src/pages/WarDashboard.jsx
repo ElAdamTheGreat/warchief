@@ -553,7 +553,7 @@ export function WarDashboard() {
           </section>
 
           {/* PART 2: RIGHT-BOTTOM - ENEMY LINEUP LIST */}
-          <section className="lg:col-span-7 bg-[#1a1d28]/30 border border-white/5 rounded-2xl p-6 shadow-lg">
+          <div className="lg:col-span-7 bg-[#1a1d28]/30 border border-white/5 rounded-2xl p-6 shadow-lg">
             <EnemyLineup
               enemies={enemies}
               clanTag={clanTag}
@@ -561,7 +561,7 @@ export function WarDashboard() {
               onSelectEnemy={setSelectedEnemy}
               assignments={assignments}
             />
-          </section>
+          </div>
 
         </div>
       </div>

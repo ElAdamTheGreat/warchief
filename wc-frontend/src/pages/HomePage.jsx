@@ -211,20 +211,20 @@ export function HomePage() {
 
       {/* Live War Preview */}
       {clanTag && (
-        <section className="w-full relative z-10">
+        <div className="w-full relative z-10">
           <WarPreviewCard warData={warData} clanTag={clanTag} loading={loading} error={error} />
-        </section>
+        </div>
       )}
 
       {/* Search form */}
-      <section className="w-full relative z-10">
+      <div className="w-full relative z-10">
         <ClanSearchForm />
-      </section>
+      </div>
 
       {/* Recent clans */}
-      <section className="w-full relative z-10">
+      <div className="w-full relative z-10">
         <RecentClans />
-      </section>
+      </div>
     </main>
   );
 }
