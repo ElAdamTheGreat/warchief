@@ -1,6 +1,6 @@
 // REQUIREMENT: Offline application (2pt) – Service Worker
 
-const CACHE_NAME = 'warchief-v3';
+const CACHE_NAME = 'warchief-v4';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -65,6 +65,29 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
+  // For HTML page requests (like index.html), use Network-First
+  // This prevents the "white screen" issue where old cached index.html points to deleted JS chunks on Vercel
+  if (event.request.mode === 'navigate' || (event.request.headers.get('accept') && event.request.headers.get('accept').includes('text/html'))) {
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => {
+          if (response.status === 200) {
+            const responseClone = response.clone();
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(event.request, responseClone);
+            });
+          }
+          return response;
+        })
+        .catch(() => {
+          return caches.match(event.request).then((cachedResponse) => {
+             return cachedResponse || caches.match('/'); // fallback to root if specific page not in cache
+          });
+        })
+    );
+    return;
+  }
+
   // Otherwise, use Cache-First for static assets and local assets
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
@@ -86,6 +109,8 @@ self.addEventListener('fetch', (event) => {
         }
         return response;
       });
+    }).catch(() => {
+        // Ignore fetch errors for images/assets if offline
     })
   );
 });
