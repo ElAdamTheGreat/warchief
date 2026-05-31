@@ -1,6 +1,6 @@
 // REQUIREMENT: Offline application (2pt) – Service Worker
 
-const CACHE_NAME = 'warchief-v2';
+const CACHE_NAME = 'warchief-v3';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
