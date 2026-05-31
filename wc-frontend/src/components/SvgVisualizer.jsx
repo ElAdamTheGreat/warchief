@@ -130,7 +130,7 @@ export function SvgVisualizer({ warData }) {
       fill: '#ffffff',
       'font-family': 'Outfit, sans-serif',
       'font-size': '13px',
-      'font-weight': 'black',
+      'font-weight': '900',
       'text-anchor': 'middle'
     });
 

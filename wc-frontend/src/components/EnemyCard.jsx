@@ -67,9 +67,9 @@ export function EnemyCard({ enemy, clanTag, index = 0, isSelected = false, onSel
 
         {/* Name and Stars */}
         <div className="flex flex-col">
-          <h4 className="font-headings font-bold text-slate-200 hover:text-amber-400 transition-colors duration-200 text-base">
+          <h3 className="font-headings font-bold text-slate-200 hover:text-amber-400 transition-colors duration-200 text-base">
             {enemy.name}
-          </h4>
+          </h3>
           <div className="flex items-center gap-1.5 mt-0.5">
             <span className="text-[10px] text-slate-500 font-semibold font-body uppercase">BEST DEFENSE:</span>
             {hasDefended ? (

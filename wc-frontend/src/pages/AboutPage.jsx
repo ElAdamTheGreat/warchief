@@ -17,9 +17,9 @@ export function AboutPage() {
 
       {/* Renders our Custom Shadow-DOM Web Component */}
       <section className="mb-12 text-center space-y-4">
-        <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500 font-body">
+        <h2 className="text-xs font-bold uppercase tracking-wider text-slate-500 font-body">
           Custom Web Component Badge
-        </h3>
+        </h2>
         
         {/* Render the Web Component Badge */}
         <coc-badge
@@ -34,10 +34,10 @@ export function AboutPage() {
         
         {/* Project description */}
         <div className="space-y-4 text-slate-300">
-          <h3 className="text-sm font-bold font-headings text-white uppercase tracking-wider flex items-center gap-2">
+          <h2 className="text-sm font-bold font-headings text-white uppercase tracking-wider flex items-center gap-2">
             <span className="w-1.5 h-3 bg-amber-500 rounded-sm"></span>
             Mission & Architecture
-          </h3>
+          </h2>
           <p className="text-xs font-body leading-relaxed">
             CoC War Planner is designed to give Clash of Clans leaders and strategists absolute control over clan war allocations. By integrating live API feeds with custom local-storage builders, it removes all guesswork.
           </p>
@@ -48,10 +48,10 @@ export function AboutPage() {
 
         {/* Tech Stack credits */}
         <div className="space-y-4 text-slate-300">
-          <h3 className="text-sm font-bold font-headings text-white uppercase tracking-wider flex items-center gap-2">
+          <h2 className="text-sm font-bold font-headings text-white uppercase tracking-wider flex items-center gap-2">
             <span className="w-1.5 h-3 bg-amber-500 rounded-sm"></span>
             Technical Specifications
-          </h3>
+          </h2>
           <ul className="space-y-2 text-xs font-body">
             <li>
               <span className="font-bold text-amber-500 uppercase">Framework:</span> React 18 SPA with context-driven data models
@@ -60,9 +60,7 @@ export function AboutPage() {
               <span className="font-bold text-amber-500 uppercase">Interactive:</span> Drag and Drop target mapping with drop audios
             </li>
             <li>
-              <li>
-                <span className="font-bold text-amber-500 uppercase">Encapsulation:</span> Shadow DOM custom elements and native CSS nesting
-              </li>
+              <span className="font-bold text-amber-500 uppercase">Encapsulation:</span> Shadow DOM custom elements and native CSS nesting
             </li>
             <li>
               <span className="font-bold text-amber-500 uppercase">Visuals:</span> Responsive HTML5 Canvas donuts and programmatical SVG rings

@@ -8,10 +8,10 @@ export function EnemyLineup({ enemies = [], clanTag, selectedEnemyTag, onSelectE
 
   return (
     <section className="enemy-lineup">
-      <h3 className="text-sm font-bold uppercase tracking-wider text-slate-400 mb-3 font-headings flex items-center gap-2">
+      <h2 className="text-sm font-bold uppercase tracking-wider text-slate-400 mb-3 font-headings flex items-center gap-2">
         <span className="w-1.5 h-3 bg-amber-500 rounded-sm"></span>
-        Enemy Lineup ({sortedEnemies.length})
-      </h3>
+        Lineup & Assignments ({sortedEnemies.length})
+      </h2>
       
       {sortedEnemies.length === 0 ? (
         <div className="text-center py-8 bg-[#1a1d28]/40 border border-white/5 rounded-xl text-slate-500 font-body">

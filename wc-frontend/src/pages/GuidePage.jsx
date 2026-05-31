@@ -88,10 +88,10 @@ export function GuidePage() {
         
         {/* Strategy Dashboard Card */}
         <section className="bg-[#1a1d28] border border-white/5 rounded-2xl p-6 shadow-lg space-y-4">
-          <h3 className="text-sm font-bold uppercase tracking-wider text-slate-300 font-headings flex items-center gap-2">
+          <h2 className="text-sm font-bold uppercase tracking-wider text-slate-300 font-headings flex items-center gap-2">
             <span className="w-1.5 h-3 bg-amber-500 rounded-sm"></span>
-            WAR PLANNER COMMAND MANUAL
-          </h3>
+            The Dashboard
+          </h2>
           <p className="text-xs text-slate-400 font-body leading-relaxed">
             Welcome to the ultimate war intelligence center. Our system automatically extracts roster metrics, compiles parsed opponent armies, and organizes strategy blueprints to ensure full coordination on the battlefield.
           </p>
@@ -104,7 +104,7 @@ export function GuidePage() {
           <div className="bg-[#1a1d28] border border-white/5 rounded-xl p-5 shadow-md flex flex-col justify-between">
             <div>
               <span className="text-2xl font-headings font-extrabold text-amber-500">01</span>
-              <h4 className="text-sm font-headings font-bold text-white uppercase mt-2">Intel Search</h4>
+              <h3 className="text-sm font-headings font-bold text-white uppercase mt-2">Intel Search</h3>
               <p className="text-xs text-slate-400 font-body leading-relaxed mt-2">
                 Enter your clan's tag starting with <span className="text-amber-500 font-bold">#</span> on the main dashboard. We'll query real-time war schedules, rosters, and statistics directly.
               </p>
@@ -115,7 +115,7 @@ export function GuidePage() {
           <div className="bg-[#1a1d28] border border-white/5 rounded-xl p-5 shadow-md flex flex-col justify-between">
             <div>
               <span className="text-2xl font-headings font-extrabold text-amber-500">02</span>
-              <h4 className="text-sm font-headings font-bold text-white uppercase mt-2">Battlefield Intel</h4>
+              <h3 className="text-sm font-headings font-bold text-white uppercase mt-2">Battlefield Intel</h3>
               <p className="text-xs text-slate-400 font-body leading-relaxed mt-2">
                 Inspect the scattered Town Hall war battlefield. View enemy profiles, click bases to inspect defenses, and review their most-used troop compositions.
               </p>
@@ -126,7 +126,7 @@ export function GuidePage() {
           <div className="bg-[#1a1d28] border border-white/5 rounded-xl p-5 shadow-md flex flex-col justify-between">
             <div>
               <span className="text-2xl font-headings font-extrabold text-amber-500">03</span>
-              <h4 className="text-sm font-headings font-bold text-white uppercase mt-2">Target Planner</h4>
+              <h3 className="text-sm font-headings font-bold text-white uppercase mt-2">Target Planner</h3>
               <p className="text-xs text-slate-400 font-body leading-relaxed mt-2">
                 Go to the Drag & Drop planner screen. Move your clan's members to specific enemy bases to distribute targets, and download the strategical blueprint as JSON.
               </p>

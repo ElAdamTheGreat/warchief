@@ -277,6 +277,7 @@ export function WarDashboard() {
       
       {/* PART 1: TOP WAR INFO SECTION */}
       <section className="bg-gradient-to-b from-[#1a1d28]/95 to-[#161822]/90 border-b border-white/5 py-6 shadow-2xl">
+        <h1 className="sr-only">War Dashboard</h1>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             
@@ -354,19 +355,19 @@ export function WarDashboard() {
           
           {/* PART 3: LEFT-BOTTOM - DETAILED PLAYER TACTICS INFO PANEL */}
           <section className="lg:col-span-5 bg-[#1a1d28]/60 border border-white/5 rounded-2xl p-6 shadow-xl flex flex-col min-h-[500px] backdrop-blur-sm">
-            <h3 className="text-sm font-bold uppercase tracking-wider text-slate-400 mb-4 font-headings flex items-center gap-2">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-slate-400 mb-4 font-headings flex items-center gap-2">
               <span className="w-1.5 h-3 bg-amber-500 rounded-sm"></span>
               Tactical Intel
-            </h3>
+            </h2>
 
             {!selectedEnemy ? (
               <div className="flex-grow flex flex-col items-center justify-center text-center p-6 bg-[#0f1117]/40 border border-dashed border-white/5 rounded-xl min-h-[380px]">
                 {/* Dynamically created SVG via Vanilla JS utilities */}
                 <SvgVisualizer warData={warData} />
                 
-                <h4 className="font-headings font-black text-slate-400 uppercase tracking-wider text-xs mt-6 mb-1">
+                <h3 className="font-headings font-black text-slate-400 uppercase tracking-wider text-xs mt-6 mb-1">
                   NO PLAYER SELECTED
-                </h4>
+                </h3>
                 <p className="font-body text-[11px] text-slate-500 max-w-xs leading-relaxed">
                   Click on an enemy base in the roster to reveal attack strategies, army history, and assign attackers.
                 </p>
@@ -390,9 +391,9 @@ export function WarDashboard() {
                       <span className="flex items-center justify-center w-5 h-5 rounded bg-amber-500 text-[10px] font-black text-[#0f1117] font-headings shadow-sm">
                         {selectedEnemy.mapPosition}
                       </span>
-                      <h4 className="font-headings font-black text-white text-base truncate">
+                      <h3 className="font-headings font-black text-white text-base truncate">
                         {selectedEnemy.name}
-                      </h4>
+                      </h3>
                     </div>
                     <p className="text-[9px] text-slate-500 font-body uppercase mt-0.5 tracking-wider">
                       TH{selectedEnemy.thLevel} • {selectedEnemy.tag}
@@ -412,9 +413,9 @@ export function WarDashboard() {
 
                 {/* Most Used Army composition preview */}
                 <div className="p-4 bg-[#0f1117]/40 border border-white/5 rounded-xl space-y-3">
-                  <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-body">
+                  <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-body">
                     Favorite War Army Composition
-                  </h4>
+                  </h3>
                   {selectedEnemy.army?.mostUsed && selectedEnemy.army.mostUsed.length > 0 ? (
                     <>
                       <ArmyPreview army={selectedEnemy.army.mostUsed} tileSize={64} />
@@ -455,9 +456,9 @@ export function WarDashboard() {
                 {/* Tactical Notes (Slabiny vesnice) Textarea - PLACED ABOVE COORDINATOR FOR SHORTER DRAG */}
                 <div className="p-4 bg-[#0f1117]/40 border border-white/5 rounded-xl space-y-2">
                   <div className="flex items-center justify-between">
-                    <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-body">
+                    <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-body">
                       Tactical Notes (Slabiny vesnice)
-                    </h4>
+                    </h3>
                     <span className="text-[8px] text-slate-500 font-semibold font-body uppercase">Auto-Saves</span>
                   </div>
                   <textarea
@@ -470,10 +471,10 @@ export function WarDashboard() {
 
                 {/* Attacker Coordinator Workspace Card - groups target slot and attackers list together */}
                 <div className="bg-[#151722] border border-amber-500/10 rounded-xl p-4 space-y-4 shadow-inner">
-                  <h4 className="text-[10px] font-bold text-amber-500/90 uppercase tracking-wider font-headings flex items-center gap-1.5">
+                  <h3 className="text-[10px] font-bold text-amber-500/90 uppercase tracking-wider font-headings flex items-center gap-1.5">
                     <span className="w-1 h-2 bg-amber-500 rounded-sm"></span>
                     Attacker Coordinator
-                  </h4>
+                  </h3>
                   
                   {/* Target Slot Coordinate Base Attacker */}
                   <div className="space-y-2">
