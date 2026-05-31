@@ -59,7 +59,7 @@ export function ClanSearchForm() {
             required
             autoFocus
             pattern="^#?[0289PYLQGRJCUV]+$"
-            placeholder="e.g. #2PP"
+            placeholder="e.g. #2GJPRRV8P"
             value={tag}
             onInput={handleInputTag}
             onInvalid={handleInvalidTag}
