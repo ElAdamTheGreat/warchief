@@ -110,9 +110,9 @@ function WarPreviewCard({ warData, clanTag, loading, error }) {
           
           {/* Left: Our Clan */}
           <div className="flex-1 text-left min-w-0">
-            <h3 className="font-headings font-black text-lg text-white mb-0.5 truncate group-hover:text-amber-400 transition-colors">
+            <div className="font-headings font-black text-lg text-white mb-0.5 truncate group-hover:text-amber-400 transition-colors">
               {clan.name}
-            </h3>
+            </div>
             <p className="text-[10px] text-slate-500 font-body uppercase tracking-wider">Our Clan</p>
             <p className="text-xs text-slate-400 font-body mt-1">
               <span className="text-amber-500 font-bold">{clan.stars}</span> Stars • <span className="font-semibold">{Math.round(clan.destructionPercentage)}%</span>
@@ -129,9 +129,9 @@ function WarPreviewCard({ warData, clanTag, loading, error }) {
 
           {/* Right: Opponent Clan */}
           <div className="flex-1 text-right min-w-0">
-            <h3 className="font-headings font-black text-lg text-white mb-0.5 truncate">
+            <div className="font-headings font-black text-lg text-white mb-0.5 truncate">
               {opponent?.name || 'Opponent'}
-            </h3>
+            </div>
             <p className="text-[10px] text-slate-500 font-body uppercase tracking-wider">Enemy Clan</p>
             <p className="text-xs text-slate-400 font-body mt-1">
               <span className="text-amber-500 font-bold">{opponent?.stars || 0}</span> Stars • <span className="font-semibold">{Math.round(opponent?.destructionPercentage || 0)}%</span>
@@ -190,9 +190,9 @@ export function HomePage() {
             <img src="/ui/swords.webp" alt="War" className="w-7 h-7 object-contain opacity-80 group-hover:opacity-100 transition-opacity" />
           </div>
           <div className="min-w-0">
-            <h4 className="font-headings font-black text-slate-200 text-sm tracking-wide group-hover:text-amber-400 transition-colors uppercase leading-tight">
+            <h2 className="font-headings font-black text-slate-200 text-sm tracking-wide group-hover:text-amber-400 transition-colors uppercase leading-tight">
               Featured: The Rushers
-            </h4>
+            </h2>
             <p className="text-[9px] text-amber-500 font-bold uppercase tracking-wider mt-0.5">
               TAG: #2GJPRRV8P
             </p>
